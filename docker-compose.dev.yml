@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: mapfre-app-dev
+    image: mapfre-app-dev
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.dev
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3000:3000

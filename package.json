@@ -22,7 +22,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "dev": "docker-compose -f docker-compose.dev.yml up",
+    "prod": "docker-compose -f docker-compose.prod.yml build",
+    "build:production": "REACT_APP_ENV=production yarn build",
+    "build:staging": "REACT_APP_ENV=staging yarn build"
   },
   "eslintConfig": {
     "extends": [
