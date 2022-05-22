@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: mapfre-app-prod
+    image: mapfre-app-prod
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.prod
